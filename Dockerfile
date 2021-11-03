@@ -7,4 +7,4 @@ RUN apt-get update && apt-get install -y \
  yarn
 WORKDIR /ds_rails
 COPY Gemfile Gemfile.lock /ds_rails/
-RUN bundle install --trace
+RUN bundle install
