@@ -11,7 +11,7 @@ services:
     volumes:
       - '.:/ds_rails'
     environment:
-      - 'DATABASE_PASSWORD=postgres'
+      - DATABASE_PASSWORD: postgres
     tty: true
     stdin_open: true
     depends_on:
@@ -24,6 +24,6 @@ services:
     volumes:
       - 'db-data:/var/lib/postgresql/data'
     environment:
-      - 'POSTGRES_HOST_AUTH_METHOD=trust'
-      - 'POSTGRES_USER=postgres'
-      - 'POSTGRES_PASSWORD=postgres'
+      - POSTGRES_HOST_AUTH_METHOD: trust
+      - POSTGRES_USER: postgres
+      - POSTGRES_PASSWORD: postgres
