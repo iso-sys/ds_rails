@@ -27,7 +27,11 @@ services:
       - 'POSTGRES_HOST_AUTH_METHOD=trust'
       - 'POSTGRES_USER=postgres'
       - 'POSTGRES_PASSWORD=postgres'
+# #1エラー対策 start
+# cannot access '/docker-entrypoint-initdb.d/': Operation not permitted 
     cap_add:
       - SYS_ADMIN
     security_opt:
       - seccomp:unconfined
+  # cannot access '/docker-entrypoint-initdb.d/': Operation not permitted の対策
+# #1エラー対策 3nd
